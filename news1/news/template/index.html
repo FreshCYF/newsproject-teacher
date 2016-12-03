@@ -1,0 +1,36 @@
+<div class="weui-tab">
+    <div class="weui-navbar weui-fixed">
+    	
+        <div class="weui-navbar__item {{id==tab.id?'weui-bar__item_on':''}}" ng-repeat="tab in tabs" ng-click="toggleTab(tab.id)">
+            <a class="weui-a" ng-href="{{tab.url}}">
+            	{{tab.name}}
+            </a>
+        </div>
+       
+        <!--<div class="weui-navbar__item {{id==2?'weui-bar__item_on':''}}" ng-click="toggleTab(2)">
+        	<a class="weui-a" href="#/index/login">
+            	游戏焦点
+        	</a>
+        </div>
+        <div class="weui-navbar__item {{id==3?'weui-bar__item_on':''}}" ng-click="toggleTab(3)">
+            选项三
+        </div>
+        <div class="weui-navbar__item {{id==4?'weui-bar__item_on':''}}" ng-click="toggleTab(4)">
+            选项三
+        </div>-->
+    </div>
+    <div class="weui-tab__panel">
+
+    </div>
+</div>
+<div ui-view=""></div>
+<style>
+	.weui-fixed{
+		position: fixed;
+	}
+	.weui-a{
+		display: block;
+		width: 100%;
+		/*height: 50px;*/
+	}
+</style>
